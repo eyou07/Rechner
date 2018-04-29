@@ -1,0 +1,120 @@
+<html>
+<style>
+body{
+    padding: 10px;
+}
+    h3 {color: black;}
+    .button {
+        color: ;
+        background-color: black;
+        border-radius: 4px;
+        padding: 15px;
+        margin:2px;
+    }
+    form{
+    display: inline-block
+
+    }
+    form select{
+    margin: 1px;
+    width: 100%;
+    padding: 12px 10px;
+    border: none;
+    border-radius: 2px;
+    background-color: white;
+}
+    #head {
+        color: black;
+        font-weight: bold;
+    }
+
+.slidecontainer {
+    width: 100%;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px;
+    border-radius: 6px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 26px;
+    height: 26px;
+    border-radius: 40%;
+    background: #FFA500;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+</style>
+
+<h3>was kostet mein Umzug?</h3>
+
+<div class="""slidecontainer">
+<p id="head">Wohnfläche</p>
+<p>ca. <span id="demo"></span> m</p>
+<input type="range"min="1" max="300" value="150" class="slider" id="myRange">
+
+<p id ="head">Entfernung</p>
+<p>ca.<span id="demo"></span> km</p>
+<input type="range"min="1" max="1000" value="500" class="slider" id="myRange">
+</div>
+
+<br>
+<form>
+  <select id="person" name="person">
+    <option value="1">1 Person</option>
+    <option value="2">2 Personen</option>
+    <option value="3">3 Personen</option>
+    <option value="2">4 Personen</option>
+    <option value="3">5 Personen</option>
+    <option value="2">6 Personen</option>
+    <option value="3">7 Personen</option>
+  </select>
+</form>
+
+<form>
+  <select id="zimmer" name="zimmer">
+    <option value="1zim">1 Zimmer</option>
+    <option value="2zim">2 Zimmer</option>
+    <option value="3zim">3 Zimmer</option>
+  </select>
+</form>
+
+<p>Kosten für ein
+Umzugsunternehmen</p>
+<p>Euro</p>
+
+<button class="button button1">rechnen</button>
+
+<script>
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo",);
+output.innerHTML = slider.value;
+
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
+</script>
+
+</html>
